@@ -15,6 +15,7 @@ const meta: Meta<typeof Toast> = {
   parameters: {
     layout: "fullscreen",
   },
+  tags: ["autodocs"],
 };
 
 export default meta;

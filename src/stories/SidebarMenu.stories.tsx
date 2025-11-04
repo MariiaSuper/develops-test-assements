@@ -51,18 +51,22 @@ const meta: Meta<typeof SidebarMenu> = {
     open: true,
     items: singleLevelItems,
   },
+  tags: ["autodocs"],
 };
 
 export default meta;
 type Story = StoryObj<typeof SidebarMenu>;
 
-export const SingleLevel: Story = {};
+export const SingleLevel: Story = {
+  tags: ["!autodocs"],
+};
 
 export const NestedMenus: Story = {
   args: {
     items: nestedItems,
     defaultExpandedIds: ["analytics", "projects", "current"],
   },
+  tags: ["!autodocs"],
 };
 
 const InteractiveTemplate = (args: SidebarMenuProps) => {

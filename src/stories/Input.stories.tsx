@@ -10,6 +10,7 @@ const meta: Meta<typeof Input> = {
     label: "Label",
     placeholder: "Type something…",
   },
+  tags: ["autodocs"],
 };
 
 export default meta;
