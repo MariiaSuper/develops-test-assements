@@ -45,4 +45,6 @@ Each component exports TypeScript definitions, and their Storybook stories live 
 ![Storybook overview](screenshots/storybook-sidebar-menu.png)
 ![Storybook overview](screenshots/storybook-toast.png)
 
+📚 Live Storybook: https://mariiasuper.github.io/develops-test-assements
+
 The repository includes a GitHub Actions workflow (`.github/workflows/deploy-storybook.yml`) that builds Storybook and publishes it to GitHub Pages whenever `main` is updated. After pushing to `main`, turn on **GitHub Pages** in the repo settings with the source set to **GitHub Actions** to activate deployments.
