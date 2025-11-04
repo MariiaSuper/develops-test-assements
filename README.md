@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# React Component Library Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a small React + Storybook component system that implements the three components described in the assessment brief: an enhanced `Input`, a `Toast` notification, and a nested `SidebarMenu`. The project was bootstrapped with Create React App (TypeScript template) and configured with Storybook.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+### Prerequisites
 
-### `npm start`
+- Node.js >= 18 (Node 20.17+ recommended)
+- npm 8+
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Install dependencies:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npm install
+```
 
-### `npm test`
+### Available Scripts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `npm start` – run the CRA app on [http://localhost:3000](http://localhost:3000)
+- `npm run storybook` – launch Storybook on [http://localhost:6006](http://localhost:6006)
+- `npm run build` – create a production build of the CRA app
+- `npm run build-storybook` – generate a static Storybook build (outputs to `storybook-static`)
+- `npm test` – run the CRA test runner
 
-### `npm run build`
+## Component Library
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Input (`src/components/Input`)**  
+  Accepts all native input props, supports multiple types, optional label/helper/error styles, a password visibility toggle, and a clear button.
+  ![Input text](screenshots/input-01.png) ![Input password](screenshots/input-02.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Toast (`src/components/Toast`)**  
+  Fixed bottom-right notification with configurable fade/slide transitions, severity variants, optional dismiss button, and auto-dismiss duration handling (values ≤ 0 fall back to the default timeout; auto-dismiss + close button).
+  ![Toast success](screenshots/toast-01.png) ![Toast slide](screenshots/toast-02.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **SidebarMenu (`src/components/SidebarMenu`)**  
+  Right-aligned sliding drawer with backdrop, supports unlimited nested menu items, remembers expanded state, and closes via backdrop or close button.
+  ![Sidebar closed](screenshots/side-menu-01.png) ![Sidebar nested](screenshots/side-menu-02.png)
 
-### `npm run eject`
+## Storybook
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Each component exports TypeScript definitions, and their Storybook stories live in `src/stories` grouped by domain.
+![Storybook overview](screenshots/storybook-input.png)
+![Storybook overview](screenshots/storybook-sidebar-menu.png)
+![Storybook overview](screenshots/storybook-toast.png)
