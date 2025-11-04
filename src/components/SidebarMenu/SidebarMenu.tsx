@@ -26,9 +26,7 @@ export const SidebarMenu: React.FC<SidebarMenuProps> = ({
   defaultExpandedIds = [],
   onClose,
 }) => {
-  const [expandedIds, setExpandedIds] = useState<Set<string>>(
-    new Set(defaultExpandedIds)
-  );
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set(defaultExpandedIds));
   const [shouldRender, setShouldRender] = useState(open);
 
   useEffect(() => {
@@ -67,9 +65,7 @@ export const SidebarMenu: React.FC<SidebarMenuProps> = ({
 
           return (
             <li key={item.id}>
-              <div
-                className={`sidebar-menu-item sidebar-menu-item--level-${level}`}
-              >
+              <div className={`sidebar-menu-item sidebar-menu-item--level-${level}`}>
                 {item.href ? (
                   <a
                     className="sidebar-menu-button"

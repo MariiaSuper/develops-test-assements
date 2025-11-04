@@ -22,6 +22,7 @@ npm install
 - `npm run build` – create a production build of the CRA app
 - `npm run build-storybook` – generate a static Storybook build (outputs to `storybook-static`)
 - `npm test` – run the CRA test runner
+- `npm run format` – run Prettier across source files
 
 ## Component Library
 

@@ -31,14 +31,11 @@ export const Toast: React.FC<ToastProps> = ({
   const [shouldRender, setShouldRender] = useState(true);
   const autoDismissTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const hideTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const resolvedDuration =
-    duration !== undefined && duration <= 0 ? DEFAULT_DURATION : duration;
+  const resolvedDuration = duration !== undefined && duration <= 0 ? DEFAULT_DURATION : duration;
   const transitionDuration = transition === "fade" ? FADE_DURATION : SLIDE_DURATION;
   const hasPresentedRef = useRef(false);
 
-  const clearTimeoutRef = (
-    ref: React.MutableRefObject<ReturnType<typeof setTimeout> | null>
-  ) => {
+  const clearTimeoutRef = (ref: React.MutableRefObject<ReturnType<typeof setTimeout> | null>) => {
     if (ref.current) {
       clearTimeout(ref.current);
       ref.current = null;

@@ -21,7 +21,9 @@
     border-radius: 0.5rem;
     padding: 0.5rem 0.75rem;
     background: #fff;
-    transition: border 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      border 0.2s ease,
+      box-shadow 0.2s ease;
 
     &:focus-within {
       border-color: #2563eb;

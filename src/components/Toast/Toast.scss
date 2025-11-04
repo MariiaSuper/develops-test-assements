@@ -11,7 +11,9 @@
   box-shadow: 0 15px 40px rgba(15, 23, 42, 0.35);
   opacity: 0;
   transform: translateY(0);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
   display: flex;
   gap: 0.75rem;
 
@@ -21,7 +23,9 @@
 
   &--transition-slide {
     transform: translateX(120%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
 
     &.toast--visible {
       transform: translateX(0);

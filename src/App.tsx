@@ -51,8 +51,8 @@ function App() {
           <div>
             <h1>Component Library Playground</h1>
             <p>
-              Interact with the core components implemented for the assessment.
-              For additional configurations, run <code>npm run storybook</code>.
+              Interact with the core components implemented for the assessment. For additional
+              configurations, run <code>npm run storybook</code>.
             </p>
           </div>
           <button type="button" onClick={() => setSidebarOpen(true)}>
@@ -79,11 +79,7 @@ function App() {
               helperText="Use at least 8 characters."
             />
           </div>
-          <button
-            type="button"
-            className="app-submit"
-            onClick={triggerToast}
-          >
+          <button type="button" className="app-submit" onClick={triggerToast}>
             Submit
           </button>
         </section>
